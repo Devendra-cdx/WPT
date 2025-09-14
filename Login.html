@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Page</title>
+    <style>
+         h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 28px;
+            color: #0571dd;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #ffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            display:block;
+            justify-content:center;
+            margin: 15px auto;
+            width: 150px;
+            padding: 10px auto;
+            background: #6a4ab5;
+            color: #fff;
+            border: crimson;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <section>
+            <form action="homepage.html" method="post">
+                <label class="require">Enter User name:</label>
+                <input type="text" name="Username" required><br><br>
+
+                <label class="require">Enter Your Password:</label>
+                <input type="password" id="password" name="password" maxlength="12"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                    title="Password must be at least 8 characters, contain letters, numbers, and one special symbol."
+                    required>
+
+                <button type="submit">Login</button>
+                <button type="reset-password">Reset</button>
+            </form>
+            <button>
+                <a href="Registration.html" style="color:white; text-decoration:none;">Signup</a>
+            </button>
+
+        </section>
+    </div>
+
+</body>
+
+</html>

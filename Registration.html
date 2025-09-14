@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 28px;
+            color: #0571dd;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #ffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .require::after {
+            content: " *";
+            color: red;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+            padding: 10px;
+            background: #6a4ab5;
+            color: #fff;
+            border: crimson;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            background: #b3753e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+
+        <section>
+            <form action="Login.html" method="post">
+                <section>
+                    <label class="require">Enter Your First name:</label>
+                    <input type="text" name="First name" value="" required>
+                    <div>
+                        <label class="require">Enter Your Last name:</label>
+                        <input type="text" name="Last name" value="" required>
+                    </div>
+                    <div>
+                        <label class="require">Enter User name:</label>
+                        <input type="text" name="Username" required>
+                    </div>
+                    <div>
+                        <label class="require">Enter Your Password:</label>
+                        <input type="password" id="password" name="password" maxlength="12"
+                            pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                            title="Password must be at least 8 characters, contain letters, numbers, and one special symbol."
+                            requGender
+                    </div>
+                    <div>
+                        <label class="require">Re-Enter Your Password:</label>
+                        <input type="password" name="password" id="password" minlength="8" maxlength="12" required>
+                    </div>
+                </section>
+
+                <section>
+                    <div>
+                        <label class="require">E-mail:</label>
+                        <input type="email" name="E-mail" id="" value="abc@host.com" required>
+                    </div>
+                    <div>
+                        <label class="require">Date Of Birth:</label>
+                        <input type="date" name="DOB" id="" value="mm/dd/yy" required>
+                    </div>
+                    <div>
+                        <label class="require">languages: </label>
+                        <input type="checkbox" name="checkbox">Hindi
+                        <input type="checkbox" name="checkbox">English
+                        <input type="checkbox" name="checkbox">Marathi
+                    </div>
+                    <div>
+                        <label class="require">Gender:</label>
+                        male:<input type="radio" name="Gender" value="Male">
+                        Female:<input type="radio" name="Gender" value="Female">
+                        Other:<input type="radio" name="Gender" value="Other">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </section>
+            </form>
+
+        </section>
+    </div>
+
+</body>
+
+</html>
